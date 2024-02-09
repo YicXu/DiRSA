@@ -25,7 +25,7 @@ parser.add_argument("--nsample", type=int, default=1)
 args = parser.parse_args()
 print(args)
 
-path = "config/" + args.config
+path = args.config
 with open(path, "r") as f:
     config = yaml.safe_load(f)
 
