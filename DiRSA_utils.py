@@ -101,7 +101,7 @@ def calc_quantile_CRPS(target, forecast, eval_points, mean_scaler, scaler):
 
 
 def evaluate(model, test_loaders, nsample=100, scaler=1, mean_scaler=0, foldername="", model_pre="", version_num="", model_input=''):
-    model_name = "IQmodel" + model_pre + "-" + version_num
+    model_name = "DiRSAmodel" + model_pre + "-" + version_num
     all_target = []
     all_observed_point = []
     all_observed_time = []
