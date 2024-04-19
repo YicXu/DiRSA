@@ -1,6 +1,6 @@
 # DiRSA
 Diffusion-based Radio Signal Augmentation (DiRSA) algorithm is proposed to significantly expand the training dataset, especially small datasets, while preserving
-the essential features of the radio signals. We will briefly introduce our code files in order of use.  
+the essential features of the radio signals. We will briefly introduce our code files in order of use. The RadioML2016.10a dataset download: https://www.deepsig.ai/datasets/ 
 ## General process
 First, set the variable "iftrain" to True and run "DiRSA_exe.py" to train Diffusion Models of each modulation. Then, set the "make_aug_dataset" to True and run "DiRSA_exe.py" again to make augmentation datasets. Finally, run "AMC_torch.py" to train the AMC model by augmentation datasets, and run "AMC_figure.py" to evaluate the AMC model. Please download and place the ""RadioML2016.10a_dict.pkl"" dataset in the running directory, and pay attention to set the paths of all generated files.  
 ## DiRSA_exe.py
