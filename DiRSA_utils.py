@@ -119,8 +119,17 @@ def evaluate(model, test_loaders, nsample=100, scaler=1, mean_scaler=0, folderna
             mae_total = 0
             evalpoints_total = 0
 
+            prompt = 5
+            
             with tqdm(test_loader, mininterval=5.0, maxinterval=50.0) as it:
                 for batch_no, test_batch in enumerate(it, start=1):
+                    
+                    //change prompt word
+                    for i in range(0,len(test_batch[4])):
+                        for j in range(0,11):
+                            test_batch[4][i][j]=0
+                        test_batch[4][i][prompt]=1
+                        
                     output = model.evaluate(test_batch, nsample)
 
                     samples, c_target, eval_points, observed_points, observed_time = output
